@@ -1,0 +1,191 @@
+body {
+    background-color: rgb(0, 0, 0);
+    background-image: url("Background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*Basic elements*/
+h1 {
+    background: linear-gradient(to right, red, yellow);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h5 {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+
+/*The lists*/
+li {
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+ol {
+    list-style-type: decimal;
+    display: inline-block;
+}
+
+
+/*The links*/
+a {
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: orange;
+}
+
+
+a:link {
+    color: orange;
+}
+
+a:visited {
+    background: lightsalmon;
+}
+
+a:hover {
+    color: orangered;
+}
+
+a:active {
+    text-decoration: underline;
+    color: yellow;
+}
+
+
+/*The cards*/
+
+div {
+    border: 1px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: transparent;
+    display: inline-block;
+    margin: 10px;
+}
+
+.container {
+    width: min(1500px,90%);
+}
+
+.wrapper {
+    gap: 40px;
+    display: flex;
+}
+
+.card {
+    border-radius: 14px;
+    background-color: rgb(255, 255, 255, 0.0);
+    backdrop-filter: blur(4px);
+}
+
+
+/*The animation at top*/
+.card1 {
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+    background: #1c1f2b;
+    text-align: center;
+    border: solid;
+    border-radius: 10px;
+    position: relative;
+    background: linear-gradient(to left, gold, purple);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card1::after, .card1::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 85%, rgba(255, 166, 0, 0.562), rgba(255, 217, 0, 0.521), rgba(128, 0, 128, 0.144));
+    background-clip: border-box;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.card1::before{
+    filter:blur(1.5rem);
+    opacity: 0.5;
+}
+
+
+
+/*Card edits*/
+
+.element:hover {
+    box-shadow: 12px 12px 12px orange,
+    -10px -10px 10px rgba(24, 19, 4, 0.63);
+}
+
+.box {
+    width: 48%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255, 0.02);
+}
+
+.h1 {
+    background: linear-gradient(to left, gold, purple);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.div1{
+    float: center;
+}
+
+
+.draw {
+    background: linear-gradient(to left, rgb(255, 145, 0), rgb(128, 0, 117));
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: sans-serif;
+    align-content: center;
+    font-size: larger;
+}
