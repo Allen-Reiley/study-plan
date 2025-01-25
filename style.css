@@ -189,3 +189,16 @@ div {
     align-content: center;
     font-size: larger;
 }
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 36px;
+    }
+    body {
+        width: 600px;
+    }
+    .draw, h5, p {
+        text-align: center;
+    }
+ 
+}
